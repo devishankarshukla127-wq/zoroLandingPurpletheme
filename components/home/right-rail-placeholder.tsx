@@ -17,7 +17,9 @@ type RailCardProps = {
   aside?: React.ReactNode
 }
 
-function RailCard({ title, subtitle, icon, tone, iconTone, children, className, aside }: RailCardProps) {
+function RailCard({ title, subtitle, icon, tone: requestedTone, iconTone, children, className, aside }: RailCardProps) {
+  // Minimal palette: rail cards stay white unless explicitly periwinkle.
+  const tone: Tone = requestedTone === 'periwinkle' ? requestedTone : 'white'
   return (
     <section
       aria-label={title}
@@ -49,7 +51,7 @@ function VerifiedSeal({ className }: { className?: string }) {
           <textPath href="#seal-circle">{text}</textPath>
         </text>
       </svg>
-      <span className="absolute inset-0 m-auto flex size-8 items-center justify-center rounded-lg bg-sun">
+      <span className="absolute inset-0 m-auto flex size-8 items-center justify-center rounded-lg bg-periwinkle">
         <ShieldCheck className="size-4 text-ink" strokeWidth={2.25} />
       </span>
     </div>
@@ -58,7 +60,7 @@ function VerifiedSeal({ className }: { className?: string }) {
 
 function TrustStatusCard() {
   return (
-    <RailCard title="Trust status" subtitle={trustStatus.levels[1]} icon={ShieldCheck} tone="sun" iconTone="white" aside={<VerifiedSeal className="-my-3 -mr-1" />}>
+    <RailCard title="Trust status" subtitle={trustStatus.levels[1]} icon={ShieldCheck} tone="sun" iconTone="periwinkle" aside={<VerifiedSeal className="-my-3 -mr-1" />}>
       <div className="flex flex-wrap items-center gap-2">
         <span
           aria-current="true"
@@ -67,7 +69,7 @@ function TrustStatusCard() {
           {trustStatus.current}
         </span>
         <ArrowRight aria-hidden="true" className="size-3.5 text-ink/50" />
-        <span className="label-caps inline-flex items-center gap-1 rounded-full bg-leaf px-2.5 py-1 text-[10px] text-ink">
+        <span className="label-caps inline-flex items-center gap-1 rounded-full bg-periwinkle-soft px-2.5 py-1 text-[10px] text-ink">
           <ShieldCheck aria-hidden="true" className="size-3" strokeWidth={2.5} />
           Verified
         </span>
@@ -117,7 +119,7 @@ function WeeklySummaryCard() {
 
 function LearnCard() {
   return (
-    <RailCard title="Learn" subtitle="Picked for your lanes" icon={GraduationCap} tone="peach" iconTone="white">
+    <RailCard title="Learn" subtitle="Picked for your lanes" icon={GraduationCap} tone="peach" iconTone="periwinkle">
       <ul className="flex flex-col gap-2">
         {learnItems.map((item) => (
           <li key={item.title}>
@@ -145,7 +147,7 @@ function LearnCard() {
 
 function ZorroFamilyCard() {
   return (
-    <RailCard title="From the Zorro family" subtitle="Other Zorro products" icon={Sparkles} tone="mist" iconTone="white">
+    <RailCard title="From the Zorro family" subtitle="Other Zorro products" icon={Sparkles} tone="mist" iconTone="periwinkle">
       <ul className="flex flex-col gap-3">
         {zorroFamily.map((item) => (
           <li key={item.name} className="flex items-center gap-3">

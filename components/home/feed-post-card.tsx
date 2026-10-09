@@ -20,7 +20,7 @@ function PostHeader({ post, tone }: { post: FeedPost; tone: Tone }) {
       </div>
       <div className="flex flex-wrap items-center gap-1.5">
         {post.verifiedCode && (
-          <span className="label-caps inline-flex items-center gap-1 rounded-full bg-leaf px-2.5 py-1 text-[10px] text-ink">
+          <span className="label-caps inline-flex items-center gap-1 rounded-full bg-periwinkle-soft px-2.5 py-1 text-[10px] text-ink">
             <ShieldCheck aria-hidden="true" className="size-3.5" />
             Verified · {post.verifiedCode}
           </span>
@@ -77,7 +77,7 @@ function VideoBody({ post }: { post: FeedPost }) {
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" />
         <span
           aria-hidden="true"
-          className="absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-2xl bg-sun transition-transform duration-300 ease-out group-hover/video:scale-110"
+          className="absolute top-1/2 left-1/2 flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-2xl bg-periwinkle transition-transform duration-300 ease-out group-hover/video:scale-110"
         >
           <Play className="ml-0.5 size-5 fill-ink text-ink" />
         </span>

@@ -91,7 +91,7 @@ export function SidebarNav({ collapsed, activeKey, onNavigate }: SidebarNavProps
                   'group/nav flex h-10 w-full items-center gap-3 overflow-hidden rounded-xl px-2.5 text-sm transition-colors',
                   focusRing,
                   active
-                    ? 'bg-sun font-medium text-ink'
+                    ? 'bg-periwinkle font-medium text-ink'
                     : 'text-ink/70 hover:bg-canvas hover:text-ink',
                 )}
               >

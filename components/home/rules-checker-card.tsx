@@ -90,7 +90,7 @@ function RuleResultPanel({
         <p className="font-display text-[22px] leading-[1.1] text-balance">{result.summary}</p>
 
         {result.changedThisWeek && (
-          <p className="flex items-start gap-2.5 rounded-xl bg-peach px-3 py-2.5 text-sm">
+          <p className="flex items-start gap-2.5 rounded-xl bg-periwinkle-soft px-3 py-2.5 text-sm">
             <span aria-hidden="true" className="mt-px flex size-5 shrink-0 items-center justify-center rounded-full bg-coral">
               <Flame className="size-3 fill-white text-white" />
             </span>
@@ -139,7 +139,7 @@ function RuleResultPanel({
               type="button"
               onClick={onSave}
               disabled={saved}
-              className={cn(btnSecondary, 'h-9', saved && 'border-leaf bg-leaf hover:bg-leaf')}
+              className={cn(btnSecondary, 'h-9', saved && 'border-periwinkle bg-periwinkle-soft hover:bg-periwinkle-soft')}
             >
               {saved ? (
                 <BookmarkCheck aria-hidden="true" className="size-4" />
@@ -211,7 +211,7 @@ export function RulesCheckerCard() {
     <section
       id="trade-rules"
       aria-labelledby="trade-rules-heading"
-      className="relative isolate overflow-hidden rounded-[24px] bg-sun"
+      className="relative isolate overflow-hidden rounded-[24px] bg-periwinkle"
     >
       {/* Tilted "rule changed" card, echoing the "12 enquiries this week" card on the landing page */}
       <button
@@ -336,7 +336,7 @@ export function RulesCheckerCard() {
           <button
             type="button"
             onClick={() => pickLane(changedLane)}
-            className="inline-flex h-8 items-center gap-1.5 rounded-full bg-peach px-3 font-medium text-ink focus-visible:ring-2 focus-visible:ring-ink focus-visible:outline-none sm:hidden"
+            className="inline-flex h-8 items-center gap-1.5 rounded-full bg-periwinkle-soft px-3 font-medium text-ink focus-visible:ring-2 focus-visible:ring-ink focus-visible:outline-none sm:hidden"
           >
             <Flame aria-hidden="true" className="size-3.5 fill-coral text-coral" />
             {tradeRules.changesThisWeek} rule changed

@@ -23,7 +23,7 @@ export function AppSidebar({ activeKey }: { activeKey: NavKey }) {
       />
       <aside
         className={cn(
-          'fixed top-1/2 left-4 z-30 hidden -translate-y-1/2 overflow-hidden rounded-[20px] border border-white/10 bg-white p-3 md:block',
+          'fixed top-1/2 left-4 z-30 hidden -translate-y-1/2 overflow-hidden rounded-[20px] border border-line bg-surface p-3 md:block',
           hydrated && 'transition-[width] duration-250 ease-in-out',
           collapsed ? 'w-16' : 'w-52',
         )}
