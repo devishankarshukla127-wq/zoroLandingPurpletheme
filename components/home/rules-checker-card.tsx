@@ -213,24 +213,8 @@ export function RulesCheckerCard() {
       aria-labelledby="trade-rules-heading"
       className="relative isolate overflow-hidden rounded-[24px] bg-periwinkle"
     >
-      {/* Tilted "rule changed" card, echoing the "12 enquiries this week" card on the landing page */}
-      <button
-        type="button"
-        onClick={() => pickLane(changedLane)}
-        className="group absolute top-6 right-6 hidden rotate-[4deg] items-center gap-3 rounded-2xl bg-white py-3 pr-4 pl-3 text-left shadow-[0_14px_30px_-18px_rgba(11,11,15,0.5)] transition-transform duration-300 hover:rotate-0 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-ink focus-visible:outline-none sm:flex"
-      >
-        <span aria-hidden="true" className="relative flex size-9 items-center justify-center rounded-full bg-coral">
-          <span className="absolute inset-0 animate-ping rounded-full bg-coral/40 motion-reduce:hidden" />
-          <Flame className="relative size-4 fill-white text-white" />
-        </span>
-        <span className="leading-tight">
-          <span className="block font-display text-xl text-ink">{tradeRules.changesThisWeek}</span>
-          <span className="block text-xs text-ink/70">rule changed · {laneLabel(changedLane)}</span>
-        </span>
-      </button>
-
-      <div className="flex flex-col gap-5 p-5 sm:p-7">
-        <div className="flex flex-col gap-2 sm:pr-48">
+      <div className="flex flex-col gap-4 p-5 sm:px-8 sm:py-4">
+        <div className="flex flex-col gap-1.5">
           <p className="label-caps text-ink/60">Trade rules &amp; schemes</p>
           <h1
             id="trade-rules-heading"
@@ -333,6 +317,21 @@ export function RulesCheckerCard() {
               )
             })}
           </ul>
+          {/* "Rule changed" card sits in the same row, pushed to the right, so it never overlaps the form */}
+          <button
+            type="button"
+            onClick={() => pickLane(changedLane)}
+            className="group ml-auto hidden items-center gap-2.5 rounded-2xl bg-white py-1.5 pr-3.5 pl-2 text-left shadow-[0_14px_30px_-18px_rgba(11,11,15,0.5)] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-ink focus-visible:outline-none sm:flex"
+          >
+            <span aria-hidden="true" className="relative flex size-8 items-center justify-center rounded-full bg-coral">
+              <span className="absolute inset-0 animate-ping rounded-full bg-coral/40 motion-reduce:hidden" />
+              <Flame className="relative size-4 fill-white text-white" />
+            </span>
+            <span className="leading-tight">
+              <span className="block font-display text-lg text-ink">{tradeRules.changesThisWeek}</span>
+              <span className="block text-xs text-ink/70">rule changed · {laneLabel(changedLane)}</span>
+            </span>
+          </button>
           <button
             type="button"
             onClick={() => pickLane(changedLane)}

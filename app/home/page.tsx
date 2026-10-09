@@ -9,11 +9,12 @@ export default function HomePage() {
       <MobileTopBar activeKey="home" />
       <AppSidebar activeKey="home" />
 
-      <div className="flex min-w-0 flex-1 justify-center gap-6 p-4 md:p-0">
-        <main className="w-full max-w-[640px] min-w-0">
+      <div className="flex min-w-0 flex-1 justify-center gap-6 p-4 md:p-0 xl:gap-10 xl:pr-6">
+        <main className="w-full max-w-[880px] min-w-0">
           <FeedPlaceholder />
         </main>
-        <aside aria-label="Your activity" className="hidden w-[300px] shrink-0 lg:block">
+        <aside aria-label="Your activity" className="hidden w-[300px] shrink-0 lg:block xl:ml-4">
+          {/* keep the rail inset from the right edge */}
           <div className="sticky top-4">
             <RightRailPlaceholder />
           </div>

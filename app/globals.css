@@ -200,6 +200,12 @@
     @apply bg-canvas font-body text-ink;
     font-synthesis-weight: none;
   }
+  /* Desktop reads best at ~115% browser zoom, so bake that in at normal zoom. */
+  @media (min-width: 1280px) {
+    body {
+      zoom: 1.1;
+    }
+  }
 }
 
 /* ── Motion ─────────────────────────────────────────────────────────────── */
