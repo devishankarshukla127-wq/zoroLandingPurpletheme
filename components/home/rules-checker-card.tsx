@@ -211,7 +211,7 @@ export function RulesCheckerCard() {
     <section
       id="trade-rules"
       aria-labelledby="trade-rules-heading"
-      className="relative isolate overflow-hidden rounded-[24px] bg-periwinkle"
+      className="relative isolate overflow-hidden rounded-[24px] bg-sun"
     >
       {/* Tilted "rule changed" card, echoing the "12 enquiries this week" card on the landing page */}
       <button

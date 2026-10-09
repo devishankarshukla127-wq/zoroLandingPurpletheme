@@ -6,10 +6,10 @@
 
 @theme {
   /* Brand palette, matched to the zorro-x landing page */
-  --color-canvas: #fdfdb4;
-  --color-periwinkle: #bfc4f8;
+  --color-canvas: #f6f4f2;
+  --color-periwinkle: #bcc5fb;
   --color-periwinkle-soft: #e3e5fc;
-  --color-sun: #fced6b;
+  --color-sun: #fdee6b;
   --color-mist: #d7d4e1;
   --color-leaf: #cae6a4;
   --color-peach: #f5e7d1;
@@ -18,7 +18,7 @@
   --color-indigo: #1e2160;
   --color-surface: #ffffff;
   --color-surface-soft: #fbfaf8;
-  --color-rail: #1a1a1e;
+  --color-frame: #000000;
   --color-line: rgba(11, 11, 15, 0.08);
   --color-cta: #0b0b0f;
   --color-cta-hover: #2a2a33;
