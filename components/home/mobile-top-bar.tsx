@@ -18,10 +18,10 @@ export function MobileTopBar({ activeKey }: { activeKey: NavKey }) {
         >
           <Menu aria-hidden="true" className="size-5" />
         </SheetTrigger>
-        <SheetContent side="left" className="w-[260px] gap-0 border-line bg-surface p-3 shadow-none">
+        <SheetContent side="left" className="w-[260px] gap-0 border-white/5 bg-rail p-3 shadow-none">
           <SheetTitle className="sr-only">Navigation</SheetTitle>
           <SidebarBrand collapsed={false} />
-          <div className="my-3 h-px bg-line" />
+          <div className="my-3 h-px bg-white/10" />
           <nav aria-label="Primary">
             <SidebarNav collapsed={false} activeKey={activeKey} onNavigate={() => setOpen(false)} />
           </nav>
