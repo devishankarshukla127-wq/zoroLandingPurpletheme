@@ -40,7 +40,7 @@ export function SuggestedFeed() {
   }
 
   return (
-    <section aria-labelledby="suggested-heading" className="flex flex-col gap-5">
+    <section aria-labelledby="suggested-heading" className="mx-auto flex w-full max-w-[750px] flex-col gap-5">
       <div className="flex flex-col gap-3">
         <div>
           <h2 id="suggested-heading" className="font-display text-[32px] leading-tight text-ink">

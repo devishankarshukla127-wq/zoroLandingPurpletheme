@@ -6,11 +6,11 @@ import { cn } from '@/lib/utils'
 export type Tone = 'sun' | 'periwinkle' | 'leaf' | 'peach' | 'mist' | 'coral' | 'white' | 'ink'
 
 export const toneBg: Record<Tone, string> = {
-  sun: 'bg-sun text-ink',
+  sun: 'bg-periwinkle-soft text-ink',
   periwinkle: 'bg-periwinkle text-ink',
-  leaf: 'bg-leaf text-ink',
-  peach: 'bg-peach text-ink',
-  mist: 'bg-mist text-ink',
+  leaf: 'bg-periwinkle-soft text-ink',
+  peach: 'bg-periwinkle-soft text-ink',
+  mist: 'bg-periwinkle-soft text-ink',
   coral: 'bg-coral text-white',
   white: 'bg-white text-ink',
   ink: 'bg-ink text-white',
